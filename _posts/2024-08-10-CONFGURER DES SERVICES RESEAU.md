@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "CONFIGURER DES SERVICES RESEAUX ET EQUIPEMENTS D'INTERCONNEXION"
-subtitle: "Configuration d'équipments cisco"
+subtitle: "Configuration d'équipments Cisco"
 date: 2024-08-10
-background: '/img/posts/cisco.jpg'
+background: '/img/posts/Reseau/cisco.jpg'
 ---
 
 # Sommaire:
@@ -15,10 +15,11 @@ background: '/img/posts/cisco.jpg'
  5.  Trois Préconisations de l'ANSII 
 
 ## Schema logique de la structure :
-![500](Schéma+réseau+accessible.png)
+<img src="/img\posts\Reseau\schema.png" alt="Schema logique" width="500" height="600">
 
 ## Capture du schéma logique sur packet tracer:
-![](Pasted%20image%2020250218155551.png)
+<img src="/img\posts\Reseau\pkt.png" alt="Schema packet tracer" width="900" height="600">
+
 
 ## Objectifs:
 - Réalisation du plan d’adressage réseau IPv6 et IPv4
@@ -36,79 +37,78 @@ background: '/img/posts/cisco.jpg'
 - Rendre le serveur web accessible depuis le WAN et le LAN
 
 ## 1.Plan d’adressage IP :
-![](Pasted%20image%2020250218141024.png)
-![](Pasted%20image%2020250218141046.png)
-![](Pasted%20image%2020250218141111.png)
-![](Pasted%20image%2020250218141131.png)
-
+<img src="/img\posts\Reseau\IP1.png" alt="adressage IP" width="500" height="300">
+<img src="/img\posts\Reseau\IP2.png" alt="adressage IP" width="600" height="300">
+<img src="/img\posts\Reseau\IP3.png" alt="adressage IP" width="700" height="200" >
+<img src="/img\posts\Reseau\IP4.png" alt="adressage IP" width="700" height="400">
 
 ##  2.Configuration DNS :
-![](Pasted%20image%2020250218151521.png)
+<img src="/img\posts\Reseau\DNS.png" alt="configuration DNS" width="541" height="375">
+
 ## 3.Configuration des routeurs (comprenant les tables de routage, les sous-interfaces et les NAT) :
 ### Routeur Accueil (Bleu) :
-![](Pasted%20image%2020250218151625.png)
-![](Pasted%20image%2020250218151637.png)
-![](Pasted%20image%2020250218151646.png)
-![](Pasted%20image%2020250218151656.png)
-![](Pasted%20image%2020250218151707.png)
+<img src="/img\posts\Reseau\Routeur-accueil1.png" alt="Routeur-accueil">
+<img src="/img\posts\Reseau\Routeur-accueil2.png" alt="Routeur-accueil">
+
 ### Routeur Salle Serveurs (Vert) :
-![](Pasted%20image%2020250218151730.png)
-![](Pasted%20image%2020250218151739.png)
-![](Pasted%20image%2020250218151750.png)
-![](Pasted%20image%2020250218151802.png)
-![](Pasted%20image%2020250218151813.png)
+<img src="/img\posts\Reseau\Routeur-serveur1.png" alt="Routeur-serveur">
+<img src="/img\posts\Reseau\Routeur-serveur2.png" alt="Routeur-serveur">
+
 ### Routeur Bureaux (Rouge) :
-![](Pasted%20image%2020250218151837.png)
-![](Pasted%20image%2020250218151846.png)
-![](Pasted%20image%2020250218151856.png)
-![](Pasted%20image%2020250218151907.png)
-![](Pasted%20image%2020250218151922.png)
+<img src="/img\posts\Reseau\Routeur-bureaux1.png" alt="Routeur-bureaux">
+<img src="/img\posts\Reseau\Routeur-bureaux2.png" alt="Routeur-bureaux">
+<img src="/img\posts\Reseau\Routeur-bureaux3.png" alt="Routeur-bureaux">
+
 ## 4.Configuration des Switchs (comprenant les paramètres DHCP, les VLAN, le LACP et les ACL) :
 ### 4.1. Configuration des Switchs de type layer 3 :
 
 #### **Switch Core:**
-![](Pasted%20image%2020250218152017.png)
-![](Pasted%20image%2020250218152027.png)
+<img src="/img\posts\Reseau\core-switch.png" alt="core-switch">
+
 #### **Switch Distributed 1:**
-![](Pasted%20image%2020250218152054.png)
-![](Pasted%20image%2020250218152102.png)
-![](Pasted%20image%2020250218152111.png)
+<img src="/img\posts\Reseau\switch1-dist1.png" alt="Distribution switch1">
+<img src="/img\posts\Reseau\switch1-dist2.png" alt="Distribution switch1">
+
 #### **Switch Distributed 2:**
-![](Pasted%20image%2020250218153418.png)
-![](Pasted%20image%2020250218153427.png)
-![](Pasted%20image%2020250218153436.png)
+<img src="/img\posts\Reseau\switch2-dist1.png" alt="Distribution switch2">
+<img src="/img\posts\Reseau\switch2-dist2.png" alt="Distribution switch2">
+
 ### 4.2. ACL et DHCP sur Routeur Rouge :
-![](Pasted%20image%2020250218153509.png)
-![](Pasted%20image%2020250218153519.png)
-![](Pasted%20image%2020250218153529.png)
+<img src="/img\posts\Reseau\RR-ACL.png" alt="Routeur-rouge">
+<img src="/img\posts\Reseau\RR-ACL2.png" alt="Routeur-rouge">
+<img src="/img\posts\Reseau\RR-ACL3.png" alt="Routeur-rouge">
+
 ### 4.3. Configuration des Switchs de type layer 2 :
 
 #### **Switch Serveur WEB:**
-![](Pasted%20image%2020250218153606.png)
+<img src="/img\posts\Reseau\switch-web.png" alt="switch-web">
+
 #### **Switch Réunion:**
-![](Pasted%20image%2020250218153626.png)
+<img src="/img\posts\Reseau\switch-reun.png" alt="switch-reunion">
+
 #### **Switch Accueil:**
-![](Pasted%20image%2020250218153653.png)
+<img src="/img\posts\Reseau\switch-accu.png" alt="switch-accueil">
+
 #### **Switch Showroom:**
-![](Pasted%20image%2020250218153717.png)
+<img src="/img\posts\Reseau\switch-showroom.png" alt="switch-showroom">
+
 #### **Switch Direction:**
-![](Pasted%20image%2020250218153742.png)
-![](Pasted%20image%2020250218153752.png)
+<img src="/img\posts\Reseau\switch-direct.png" alt="switch-direction">
+
 #### **Switch RH:**
-![](Pasted%20image%2020250218153814.png)
-![](Pasted%20image%2020250218153822.png)
+<img src="/img\posts\Reseau\switch-RH.png" alt="switch-RH">
+
 #### **Switch Commerciaux/Chargés de clientèle:**
-![](Pasted%20image%2020250218153850.png)
-![](Pasted%20image%2020250218153858.png)
+<img src="/img\posts\Reseau\switch-commerce.png" alt="switch-commercial">
+
 #### **Switch Finance:**
-![](Pasted%20image%2020250218153920.png)
-![](Pasted%20image%2020250218153929.png)
+<img src="/img\posts\Reseau\switch-finance.png" alt="switch-finance">
+
 #### **Switch Service Informatique:**
-![](Pasted%20image%2020250218153954.png)
-![](Pasted%20image%2020250218154002.png)
+<img src="/img\posts\Reseau\switch-informat.png" alt="switch-informatique">
+
 #### **Switch du serveur DNS :**
-![](Pasted%20image%2020250218154022.png)
-![](Pasted%20image%2020250218154031.png)
+<img src="/img\posts\Reseau\switch-dns.png" alt="switch-DNS">
 
 ## 5. Recommandations ANSSI:
 ### 1.Première Recommandation :

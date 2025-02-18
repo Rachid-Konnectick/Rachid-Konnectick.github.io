@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "DEPLOYER UNE ARCHITECTURE N-TIER POUR UNE PME"
-subtitle: ""
+subtitle: "Architecture trois-tier: WebServer, DBServer, DNSServer"
 date: 2024-03-05 
-background: '/img/posts/n-tier.jpg'
+background: '/img/posts/N-tier/n-tier.jpg'
 ---
 
 
@@ -15,12 +15,13 @@ background: '/img/posts/n-tier.jpg'
 5. Configuration des zones DNS dans BIND 9
 
 ## Schema de l'architecture n-tier:
+
 ### Adresses IP:
 - Webserver : 192.168.1.12
 - Mariadb : 192.168.1.10
-- Bind9  192.168.1.9
+- Bind9 :  192.168.1.9
 
-![](Schema%20des%20flux.drawio.png)
+<img src="/img/posts/N-tier/schema.png" alt="schema" width="600" height="600">
 
 ## 1. Installation de BIND 9 sur Debian 12:
 ### Mise a jour du cache et installation:
