@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "DEPLOYER UNE ARCHITECTURE N-TIER DANS UNE PME"
+title: "DEPLOYER UNE ARCHITECTURE N-TIER POUR UNE PME"
 subtitle: ""
-date: 2025-02-14 19:25:13
+date: 2024-03-05 
 background: '/img/posts/n-tier.jpg'
 ---
 
@@ -16,9 +16,9 @@ background: '/img/posts/n-tier.jpg'
 
 ## Schema de l'architecture n-tier:
 ### Adresses IP:
-Webserver : 192.168.1.12
-Mariadb : 192.168.1.10
-Bind9  192.168.1.9
+- Webserver : 192.168.1.12
+- Mariadb : 192.168.1.10
+- Bind9  192.168.1.9
 
 ![](Schema%20des%20flux.drawio.png)
 
