@@ -3,7 +3,7 @@ layout: post
 title: "Install Bind 9"
 subtitle: "Install and configure Bind 9 on Debian 12."
 date: 2025-02-14 19:25:13 -0400
-background: '/img/posts/01.jpg'
+background: '/img/posts/n-tier.jpg'
 ---
 
 ## Mise a jour du cache et installation:
