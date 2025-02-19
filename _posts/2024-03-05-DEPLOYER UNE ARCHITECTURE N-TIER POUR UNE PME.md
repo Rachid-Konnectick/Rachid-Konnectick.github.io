@@ -8,11 +8,11 @@ background: '/img/posts/N-tier/n-tier.jpg'
 
 
 # Sommaire
-1. Installation de BIND 9 sur Debian 12
-2. Installation et Configuration de la Base de données Mariadb
-3. Installation d'Apache2 et PHP sur Debian 12
-4. Configuration du Virtualhost sur Apache2 et du fichier vars.php
-5. Configuration des zones DNS dans BIND 9
+1. [Installation de BIND 9 sur Debian 12](#1-installation-de-bind-9-sur-debian-12)
+2. [Installation et Configuration de la Base de données Mariadb](#2installation-et-configuration-de-la-base-de-données-mariadb-sur-debian-12)
+3. [Installation d'Apache2 et PHP sur Debian 12](#3-installation-dapache2-sur-debian-12)
+4. [Configuration du Virtualhost sur Apache2 et du fichier vars.php](#4configuration-du-virtualhost-sur-apache2-et-du-fichier-varsphp)
+5. [Configuration des zones DNS dans BIND 9](#5-configuration-des-zones-dns-dans-bind-9)
 
 ## Schema de l'architecture n-tier:
 
@@ -48,6 +48,7 @@ create database beesafe;
 create user 'user1'@'192.168.1.12' identified by 'yoursecurepassword';
 grant all privileges on beesafe.* to 'user1'@'192.168.1.12' with grant option;
 flush privileges;
+exit
 ```
 ### Sécuriser la base de données:
 ```sh

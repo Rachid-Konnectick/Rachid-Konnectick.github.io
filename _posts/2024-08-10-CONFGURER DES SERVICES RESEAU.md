@@ -8,11 +8,12 @@ background: '/img/posts/Reseau/cisco.jpg'
 
 # Sommaire:
 
- 1. Plan d’adressage IP 
- 2. Configuration DNS 
- 3. Configuration des routeurs (comprenant les tables de routage, les sous-interfaces et les NAT) 
- 4. Configuration des Switch (comprenant les paramètres DHCP, les VLAN, le LACP et les ACL)
- 5.  Trois Préconisations de l'ANSII 
+ 1. [Plan d’adressage IP](#1plan-dadressage-ip) 
+ 2. [Configuration DNS](#2configuration-dns) 
+ 3. [Configuration des routeurs (comprenant les tables de routage, les sous-interfaces et les NAT)](#3configuration-des-routeurscomprenant-les-tables-de-routage-les-sous-interfaces-et-les-nat) 
+ 4. [Configuration des Switch (comprenant les paramètres DHCP, les VLAN, le LACP et les ACL)](#4configuration-des-switchscomprenant-les-paramètres-dhcp-les-vlan-le-lacp-et-les-acl)
+ 5.  [Trois Préconisations de l'ANSII](#5-recommandations-anssi-pour-lamélioration-de-la-structure)
+  
 
 ## Schema logique de la structure :
 <img src="/img\posts\Reseau\schema.png" alt="Schema logique" width="500" height="600">
@@ -110,11 +111,10 @@ background: '/img/posts/Reseau/cisco.jpg'
 #### **Switch du serveur DNS :**
 <img src="/img\posts\Reseau\switch-dns.png" alt="switch-DNS">
 
-## 5. Recommandations ANSSI:
+## 5. Recommandations ANSSI pour l'amélioration de la structure:
 ### 1.Première Recommandation :
 Protéger les flux d'administration transitant sur un réseau tiers **R21** :
 Lorsque les flux d’administration transitent par un réseau tiers ou hors de locaux sécurisés, ils doivent être chiffrés et authentifiés de bout en bout, en utilisant par exemple un tunnel IPsec.
-![600](Pasted%20image%2020250218160317.png)
 ### 2.Deuxième Recommandation :
 Recommandation **R45** : Une politique de sauvegarde doit être définie et appliquée pour le SI d'administration.
 Prévoir des sauvegardes hors ligne pour les éléments les plus critiques.
