@@ -73,6 +73,7 @@ systemctl restart apache2.service
 systemctl start nagios.service
 ```
 ## Installer les plugins Nagios:
+
 ```sh
 # Installer les prérequis:
 apt-get install -y autoconf gcc libc6 libmcrypt-dev make libssl-dev wget bc gawk dc build-essential snmp libnet-snmp-perl gettext
@@ -95,6 +96,7 @@ systemctl start nagios.service
 systemctl stop nagios.service  
 systemctl restart nagios.service  
 systemctl status nagios.service
+
 ```
 -Tester la config Nagios:
 
@@ -114,7 +116,7 @@ echo "nagios ALL=NOPASSWD:/bin/systemctl restart nagios" >> /etc/sudoers
 apt update && apt upgrade -y
 apt install sudo openssh-server -y
 ```
-### Ajouter un user au groupe sudo
+### Ajouter un user au groupe sudo :
 ```sh
 usermod -aG sudo 'username'
 apt install openssh-server
@@ -122,25 +124,28 @@ apt install openssh-server
 ### Connexion au serveur debian via ssh :
 Ouvrir cmd:
 `ssh 'username'@192.168.x.x`
-### Install Apache2
+### Install Apache2 :
+
 ```sh
 sudo apt-get update -y && sudo apt-get upgrade -y
 sudo apt install apache2 ghostscript libapache2-mod-php -y
 sudo systemctl enable apache2 && sudo systemctl start apache2
 sudo systemctl status apache2
 ```
-### Install PHP 8.2
+### Install PHP 8.2 :
 ```sh
 sudo apt-get install php8.2 php8.2-cli php8.2-common php8.2-imap php8.2-redis php8.2-snmp php8.2-xml php8.2-mysqli php8.2-zip php8.2-mbstring php8.2-curl libapache2-mod-php -y
 php -v
 ```
-### Install MariaDB:
+### Install MariaDB :
+
 ```sh
 sudo apt install mariadb-server -y
 sudo systemctl start mariadb && sudo systemctl enable mariadb
 sudo systemctl status mariadb
 ```
-### Create Mysql Wordpress DB and User:
+### Create Mysql Wordpress DB and User :
+
 ```sh
 sudo mysql -u root 
 CREATE USER 'wdp1'@'localhost' IDENTIFIED BY 'yoursecurepassword';
@@ -149,11 +154,12 @@ GRANT ALL PRIVILEGES ON wordpress.* TO 'wdp1'@'localhost';
 FLUSH PRIVILEGES;
 EXIT
 ```
-### Sécuriser MariaDB:
-show databases;
+### Sécuriser MariaDB :
+
 ```sh
 sudo mysql_secure_installation
 ```
+
 ```sh
 enter root password, enter for none
 unix_socket authentification [no]
@@ -163,10 +169,12 @@ Disallow root login remotly [yes]
 suppresion de la base de données test [yes]
 Reload priviliges tables now?[yes]
 ```
+
 ```sh
 sudo systemctl restart mariadb
 ```
 ### Install Wordpress:
+
 ```sh
 sudo apt install unzip
 cd /var/www/html
@@ -186,6 +194,7 @@ sudo chmod -R 755 /var/www/html/
 ```
 
 ### Entrer les DB credentials dans le fichier wp-config.php:
+
 ```sh
 sudo cp wp-config-sample.php wp-config.php
 sudo nano wp-config.php
@@ -195,7 +204,8 @@ sudo nano wp-config.php
 sudo rm wp-config-sample.php
 sudo chmod 400 /var/www/html/wordpress/wp-config.php
 ```
-Changer : DB_name, DB_user and DB_password :
+- Changer : DB_name, DB_user and DB_password :
+
 ```sh
 ** The name of the database for WordPress */
 define( 'DB_NAME', 'wordpress_db' );
@@ -228,6 +238,7 @@ define('LOGGED_IN_SALT',   'c/j9bs=$|3V@c0SPv?#H=NJa+19+pYn,%FYN:16yX-,&@8|bvs<^
 define('NONCE_SALT',       '`%,>]I9qq(ZySP3-mY**P_.H>Zb/Ughs%D]WD u7*>F,%t7A|NH>sOs`a*fcyN1V');
 ```
 ### Créer un Virtualhost Wordpress:
+
 ```sh
 cd /etc/apache2/sites-available/
 sudo touch wordpress.conf
@@ -250,6 +261,7 @@ CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
 ### Activer Wordpress Vhost et le rewrite module:
+
 ```sh
 sudo a2enmod rewrite
 a2dissite 000-default
@@ -260,6 +272,7 @@ sudo systemctl status apache2.service -l --no-pager
 reboot
 ```
 ### Vérifier les erreurs de syntaxe:
+
 ```sh
 sudo apachectl configtest
 ```
@@ -267,10 +280,12 @@ sudo apachectl configtest
 sudo systemctl reload apache2
 ```
 ### Pour l'Erreur: AH00558: Could not reliably determine the server’s fully qualified domain name:
+
 ```sh
 nano /etc/apache2/apache2.conf
 ```
-rajouter a la fin:
+-Rajouter a la fin:
+
 ```
 ServerName 127.0.0.1
 ```
