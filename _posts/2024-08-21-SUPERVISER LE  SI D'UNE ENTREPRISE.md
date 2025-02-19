@@ -6,7 +6,7 @@ date: 2024-08-21
 background: '/img/posts/Supervision/nagios.jpg'
 ---
 # Sommaire
-1. Objectif
+1. [Objectif](#1objectif-)
 2. [Installer Nagios](#Installer-Nagios)
 3. [Installer Wordpress sur Debian 12](#3installer-wordpress-sur-debian-12)
 4. [Installer NRPE Plugin](#4installer-nrpe-plugin)
@@ -89,6 +89,7 @@ make
 make install
 ```
 ## Commandes de Service Nagios :
+
 ```sh
 systemctl start nagios.service  
 systemctl stop nagios.service  
@@ -96,16 +97,19 @@ systemctl restart nagios.service
 systemctl status nagios.service
 ```
 -Tester la config Nagios:
+
 ```sh
 /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
 ```
 -Donner au compte `nagios` le droit de relancer Nagios:
+
 ```sh
 echo "nagios ALL=NOPASSWD:/bin/systemctl restart nagios" >> /etc/sudoers
 ```
 # 3.Installer Wordpress sur Debian 12:
 ## Preparation accès SSH:
 ### Installer SUDO et Open-SSH sur Debian 12:
+
 ```sh
 apt update && apt upgrade -y
 apt install sudo openssh-server -y
@@ -150,7 +154,7 @@ show databases;
 ```sh
 sudo mysql_secure_installation
 ```
-```
+```sh
 enter root password, enter for none
 unix_socket authentification [no]
 change the root password (ajouter votre mot de pase root)
