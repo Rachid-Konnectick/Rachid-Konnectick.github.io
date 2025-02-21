@@ -1,17 +1,17 @@
 title:              Rachid Tireche Blog
 subtitle:           Wellcome To !!!
 email:              rachid0311@gmail.com
-description:        My Portfolio Webpage
+description:        Rachid Tireche Portfolio Webpage
 author:             Rachid-Koonnectick
 baseurl:            ""
 url:                "https://Rachid-Konnectick.github.io"
 
 # Social Profiles
 twitter_username:   
-github_username:    
+github_username:  rachid.tireche  
 facebook_username:  
 instagram_username:  
-linkedin_username:
+linkedin_username: rachid.tireche
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
